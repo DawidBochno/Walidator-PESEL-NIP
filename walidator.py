@@ -193,8 +193,8 @@ def check_file(src, dst, mapping=None, log=print):
                     ws.cell(row, extra[c], born).number_format = "yyyy-mm-dd"
                     ws.cell(row, extra[c] + 1, sex)
     if not stats:
-        log("  Nie znaleziono kolumn PESEL/NIP/REGON/IBAN/dowod (naglowek w wierszu 1)"
-            " - wpisz kolumny recznie, np. C=PESEL.")
+        log("  Brak numerow do sprawdzenia (kolumny rozpoznawane po naglowku w wierszu 1)"
+            " - mozna je wpisac recznie, np. C=PESEL. Plik nie zapisany.")
         return stats
     for e in errors[:20]:
         log(("    BLAD " + e).translate(ASCII))
